@@ -1,13 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://www.clasificacionde.org/wp-content/uploads/2020/09/Ejemplos-De-S%C3%B3lidos.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-button {
-  margin: 10px;
+
+.box {
+  padding: 20px 30px;
+  width: 400px;
+  height: 400px; /* Ajusta la altura según sea necesario */
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  background: rgba(49, 49, 49, .2);
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.box .form {
   padding: 10px 20px;
-  font-size: 16px;
 }
-#resultado {
-  margin-top: 20px;
-  font-weight: bold;
+
+.box .form h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.box .form form {
+  margin-top: 50px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box .form .inputbox {
+  position: relative;
+}
+
+.box .form .inputbox input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #12151e;
+  margin-bottom: 10px;
+}
+
+.box .form .inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 10px 20px;
+  pointer-events: none;
+  color: #fff;
+  transition: .5s;
+}
+
+.box .form .inputbox input:focus ~ span,
+.box .form .inputbox input:valid ~ span {
+  transform: translateY(-30px);
+  font-size: 12px;
 }
